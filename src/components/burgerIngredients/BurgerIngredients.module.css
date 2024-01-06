@@ -1,0 +1,13 @@
+.burgerIngredients {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.ingredientsList {
+  margin: 0;
+  padding: 0;
+  max-height: 69vh;
+  overflow-y: scroll;
+  list-style-type: none;
+}

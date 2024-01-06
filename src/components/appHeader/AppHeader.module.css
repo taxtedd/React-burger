@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #1C1C21;
+}
+
+.content {
+  min-width: 1280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+}
+
+.contentItem {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  left: 38.6%;
+}

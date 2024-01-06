@@ -1,0 +1,27 @@
+.burgerConstructor {
+  min-width: 568px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 63vh;
+  overflow-y: scroll;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fixedListItem {
+  align-self: flex-end;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap:40px;
+}
