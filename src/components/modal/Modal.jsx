@@ -3,14 +3,12 @@ import ReactDOM from "react-dom";
 import PropTypes from 'prop-types';
 import styles from './Modal.module.css';
 import ModalOverlay from '../modalOverlay/ModalOverlay';
-import OrderDetails from '../orderDetails/OrderDetails';
-import IngredientDetails from '../ingredientDetails/IngredientDetails';
 import { CloseIcon } from '@ya.praktikum/react-developer-burger-ui-components'
 
 const modalRoot = document.getElementById("react-modals");
 
 function Modal(props) {
-  const {onClose, modalType, selectedItem} = props;
+  const {onClose} = props;
 
   function handleEscape(event) {
     if (event.key === 'Escape') {
@@ -35,8 +33,7 @@ function Modal(props) {
           <button className={styles.exit} onClick={onClose}>
             <CloseIcon type="primary" />
           </button> 
-          {modalType === 'orderDetails' && <OrderDetails/>}
-          {modalType === 'ingredientDetails' && <IngredientDetails ingredient={selectedItem}/>}
+          {props.children}
         </div>
       </> 
     ),
@@ -46,8 +43,6 @@ function Modal(props) {
 
 Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
-  modalType: PropTypes.string.isRequired,
-  selectedItem: PropTypes.object.isRequired
 }; 
 
 export default Modal;

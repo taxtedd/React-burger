@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './BurgerConstructor.module.css';
 import Modal from '../modal/Modal';
+import OrderDetails from '../orderDetails/OrderDetails';
 import { Button, ConstructorElement, DragIcon, CurrencyIcon } from '@ya.praktikum/react-developer-burger-ui-components'
 
 function BurgerConstructor(props) {
@@ -74,7 +75,9 @@ function BurgerConstructor(props) {
         </Button>
       </div>
       {isModalOpened === true &&
-        <Modal onClose={handleCloseModal} modalType={'orderDetails'}/>
+        <Modal onClose={handleCloseModal}>
+          <OrderDetails/>
+        </Modal>
       }
     </div>
   );

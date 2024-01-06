@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './BurgerIngredients.module.css';
-import { Tab } from '@ya.praktikum/react-developer-burger-ui-components'
 import BurgerIngredient from '../burgerIngredient/BurgerIngredient';
 import Modal from '../modal/Modal';
+import IngredientDetails from '../ingredientDetails/IngredientDetails';
+import { Tab } from '@ya.praktikum/react-developer-burger-ui-components';
 
 function BurgerIngredients(props) {
   const [isModalOpened, setIsModalOpened] = React.useState(false);
@@ -53,7 +54,9 @@ function BurgerIngredients(props) {
         </li>
       </ul>
       {isModalOpened === true &&
-        <Modal onClose={handleCloseModal} modalType={'ingredientDetails'} selectedItem={selectedItem} />
+        <Modal onClose={handleCloseModal}>
+          <IngredientDetails ingredient={selectedItem}/>
+        </Modal>
       }
     </div>
   );
