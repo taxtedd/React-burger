@@ -1,0 +1,25 @@
+.main {
+  position: fixed;
+  top: 10%;
+  left: 31%;
+  width: 720px;
+  min-height: 539px;
+  background-color: #1C1C21;
+  z-index: 2;
+  border-radius: 40px;
+}
+
+.exit {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  background-color: transparent;
+}
+
+.exit:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
